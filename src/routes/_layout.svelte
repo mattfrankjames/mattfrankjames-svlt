@@ -47,8 +47,8 @@
   <footer>
     <span>
       &copy; {new Date().getFullYear()} Matt Frank James.
-      Powered by <a href="https://sapper.svelte.dev" target="_blank">Sapper</a>.
-      Template by <a href="https://www.twitter.com/Charca" target="_blank">Maxi Ferreira</a>.
+      Powered by <a href="https://sapper.svelte.dev" target="_blank" rel="noopener noreferrer">Sapper</a>.
+      Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener noreferrer">Maxi Ferreira</a>.
     </span>
   </footer>
 </div>
