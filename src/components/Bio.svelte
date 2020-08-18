@@ -13,7 +13,7 @@ import { dataset_dev } from "svelte/internal";
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    /* border: 3px solid #fd6378; */
+    /* border: 3px solid #34e4f6; */
     display: block;
     margin-right: 20px;
   }

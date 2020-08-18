@@ -5,6 +5,16 @@
 </script>
 
 <style>
+:root {
+  --color-primary: #36393b;
+  --color-secondary: white;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: white;
+    --color-secondary: #36393b;
+  }
+}
   .layout {
     display: flex;
     flex-direction: column;
@@ -17,7 +27,7 @@
     position: relative;
     margin: 0 auto;
     max-width: 1400px;
-    background-color: white;
+    background-color: var(--color-secondary);
     padding: 1em 2em;
     box-sizing: border-box;
     width: 100%;
@@ -26,7 +36,7 @@
   }
 
   footer {
-    color: #737171;
+    color: var(--color-primary);
     font-size: 1em;
     font-family: Rubik, sans-serif;
     margin: 1em auto;
