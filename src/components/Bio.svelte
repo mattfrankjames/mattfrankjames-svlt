@@ -13,6 +13,7 @@ import { dataset_dev } from "svelte/internal";
     width: 100px;
     height: 100px;
     border-radius: 100px;
+    object-fit: cover;
     /* border: 3px solid #34e4f6; */
     display: block;
     margin-right: 20px;
@@ -27,7 +28,7 @@ import { dataset_dev } from "svelte/internal";
   <img src="profile-pic.jpg" alt="Matt James">
   <p>
     Hi, I'm <strong>Matt</strong>. I'm a husband, dad, cyclist and front-end developer from St. Louis, MO.
-    You can follow me on <a href="https://www.twitter.com/mattfrankjames" target="_blank">Twitter</a>,
-    see some of my work on <a href="https://www.github.com/mattfrankjames" ortarget="_blank">GitHub</a>.
+    You can follow me on <a href="https://www.twitter.com/mattfrankjames" target="_blank" rel="noopener norefferer">Twitter</a>,
+    see some of my work on <a href="https://www.github.com/mattfrankjames" target="_blank" rel="noopener norefferer">GitHub</a>.
   </p>
 </div>
