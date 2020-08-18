@@ -28,7 +28,7 @@
   }
 
   header p {
-    color: #737171;
+    color: var(--color-tertiary);
     text-transform: uppercase;
     font-family: Rubik, sans-serif;
     font-weight: 600;

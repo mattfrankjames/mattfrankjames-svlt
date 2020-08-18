@@ -18,7 +18,7 @@
   }
 
   .post-item-date {
-    color: #737171;
+    color: var(--color-tertiary);
     text-align: left;
     text-transform: uppercase;
     margin-right: 16px;

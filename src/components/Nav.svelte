@@ -34,7 +34,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #737171;
+    background: var(--color-tertiary);
     transform: scaleX(0);
   }
 
