@@ -25,7 +25,7 @@ import { dataset_dev } from "svelte/internal";
 </style>
 
 <div>
-  <img src="profile-pic.jpg" alt="Matt James">
+  <img src="profile-pic.jpg" loading="lazy" alt="Matt James">
   <p>
     Hi, I'm <strong>Matt</strong>. I'm a husband, dad, cyclist and front-end developer from St. Louis, MO.
     You can follow me on <a href="https://www.twitter.com/mattfrankjames" target="_blank" rel="noopener norefferer">Twitter</a>,
