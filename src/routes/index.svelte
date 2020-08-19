@@ -70,7 +70,7 @@
 <div class="home-container">
   <div class="home-copy">
     <h1>Hi. I'm Matt James.</h1>
-    <p>I've got a family, ride bikes, take photos and make stuff on the web.</p>
+    <p>I have a family that I love above all else, I also ride bikes, take photos and make stuff on the web.</p>
   </div>
 
   <figure>
