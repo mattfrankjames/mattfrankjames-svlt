@@ -35,6 +35,9 @@
   img {
     width: 100%;
     max-width: 400px;
+    background: #aeaaaa;
+    padding: 1em;
+    border-radius: 10px;
   }
 
   @media (max-width: 1020px) {
@@ -66,12 +69,12 @@
 
 <div class="home-container">
   <div class="home-copy">
-    <h1>Welcome to your new Sapper Blog</h1>
-    <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
+    <h1>Hi. I'm Matt James.</h1>
+    <p>I've got a family, ride bikes, take photos and make stuff on the web.</p>
   </div>
 
   <figure>
-    <img alt='Person typing on laptop' src='undraw-illustration.svg'>
+    <img alt='Person typing on laptop' src='undraw_biking_kc4f.svg'>
     <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
   </figure>
 </div>

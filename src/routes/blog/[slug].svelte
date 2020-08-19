@@ -30,7 +30,7 @@
   header p {
     color: var(--color-tertiary);
     text-transform: uppercase;
-    font-family: Rubik, sans-serif;
+    font-family: 'Kanit', sans-serif;
     font-weight: 600;
   }
 
