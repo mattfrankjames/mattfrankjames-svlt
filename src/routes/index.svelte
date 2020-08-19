@@ -64,7 +64,7 @@
 </style>
 
 <svelte:head>
-  <title>Sapper Blog Template</title>
+  <title>Matt Frank James</title>
 </svelte:head>
 
 <div class="home-container">
