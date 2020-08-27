@@ -146,7 +146,7 @@
 
 <div class="home-container">
   <figure>
-    <img alt="Person typing on laptop" src="undraw_biking_kc4f.svg" loading="lazy" />
+    <img alt="Person typing on laptop" src="undraw_biking_kc4f.svg" loading="lazy" width="475" height="365"/>
     <figcaption>
       Illustration thanks to
       <a href="https://undraw.co" rel="noopener noreferrer" target="_blank">Undraw</a>
