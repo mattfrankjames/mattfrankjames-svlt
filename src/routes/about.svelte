@@ -1,4 +1,4 @@
-<style type="text/scss">
+<style>
   img {
     border-radius: 8px;
     grid-column: 2/3;
@@ -33,8 +33,7 @@
     <img src="/profile-pic.jpg" alt="Matt James">
     <div class="content-wrapper__text-block">
       <p>My name is Matt James and I make things on the web.</p>
-      <p>
-        I've also been know to take photographs, abuse the guitar and play in the woods on bikes.
+      <p>I've followed a long and circuitous path to come to the point that I am at today. I have been involved in media communications for over twenty years and began my foray into interactive media and design roughly a decade ago. When I'm not developing for the web or designing and photographing for local startups, I can be found chasing kids, riding bikes and playing outside. Get in touch: <a href="mailto:mattjamesmedia@gmail.com">mattjamesmedia@gmail.com</a>
       </p>
     </div>
   </div>

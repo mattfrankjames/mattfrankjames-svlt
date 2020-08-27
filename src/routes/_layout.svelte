@@ -26,7 +26,7 @@
     flex: 1;
     position: relative;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1200px;
     background-color: var(--color-secondary);
     padding: 1em 2em;
     box-sizing: border-box;
