@@ -1,38 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
-	<meta name="description" content="The personal site of Matt James, a dad, husband, cylist and web developer from Saint Louis, Missouri">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
+    <meta
+      name="description"
+      content="The personal site of Matt James, a dad, husband, cylist and web developer from Saint Louis, Missouri"
+    />
 
-	%sapper.base%
+    %sapper.base%
 
-	<link rel='stylesheet' href='global.css'>
-	<!-- <link rel='stylesheet' href='fonts.css'> -->
-	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;600&display=swap" rel="stylesheet">
-	<link rel='stylesheet' href='highlight.css'>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-	<link rel='manifest' href='manifest.json'>
-	<link rel='icon' type='image/png' href='favicon.ico'>
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="global.css" />
+    <!-- <link rel='preload' onload="this.rel='stylesheet'" href='fonts.css'> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;600&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="highlight.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+		/>
+		<script>
+			/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+		(function(w){
+			"use strict";
+			/* exported loadCSS */
+			var loadCSS = function( href, before, media ){
+				// Arguments explained:
+				// `href` [REQUIRED] is the URL for your CSS file.
+				// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+					// By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+				// `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+				var doc = w.document;
+				var ss = doc.createElement( "link" );
+				var ref;
+				if( before ){
+					ref = before;
+				}
+				else {
+					var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+					ref = refs[ refs.length - 1];
+				}
 
-	<!-- Sapper generates a <style> tag containing critical CSS
+				var sheets = doc.styleSheets;
+				ss.rel = "stylesheet";
+				ss.href = href;
+				// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+				ss.media = "only x";
+
+				// wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+				function ready( cb ){
+					if( doc.body ){
+						return cb();
+					}
+					setTimeout(function(){
+						ready( cb );
+					});
+				}
+				// Inject link
+					// Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+					// Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+				ready( function(){
+					ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+				});
+				// A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+				var onloadcssdefined = function( cb ){
+					var resolvedHref = ss.href;
+					var i = sheets.length;
+					while( i-- ){
+						if( sheets[ i ].href === resolvedHref ){
+							return cb();
+						}
+					}
+					setTimeout(function() {
+						onloadcssdefined( cb );
+					});
+				};
+
+				function loadCB(){
+					if( ss.addEventListener ){
+						ss.removeEventListener( "load", loadCB );
+					}
+					ss.media = media || "all";
+				}
+
+				// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+				if( ss.addEventListener ){
+					ss.addEventListener( "load", loadCB);
+				}
+				ss.onloadcssdefined = onloadcssdefined;
+				onloadcssdefined( loadCB );
+				return ss;
+			};
+			// commonjs
+			if( typeof exports !== "undefined" ){
+				exports.loadCSS = loadCSS;
+			}
+			else {
+				w.loadCSS = loadCSS;
+			}
+		}( typeof global !== "undefined" ? global : this ));
+		!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(t){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),r=0;r<e.length;r++){var n=e[r];"preload"===n.rel&&"style"===n.getAttribute("as")&&(t.loadCSS(n.href,n,n.getAttribute("media")),n.rel=null)}},!e.support()){e.poly();var r=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){e.poly(),t.clearInterval(r)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(r)})}}}(this);
+			</script>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="favicon.ico" />
+
+    <!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
-	%sapper.styles%
+    %sapper.styles%
 
-	<!-- This contains the contents of the <svelte:head> component, if
+    <!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
-	%sapper.head%
-</head>
-<body>
-	<!-- The application will be rendered inside this element,
+    %sapper.head%
+  </head>
+  <body>
+    <!-- The application will be rendered inside this element,
 	     because `app/client.js` references it -->
-	<div id='sapper'>%sapper.html%</div>
+    <div id="sapper">%sapper.html%</div>
 
-	<!-- Sapper creates a <script> tag containing `app/client.js`
+    <!-- Sapper creates a <script> tag containing `app/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
-	%sapper.scripts%
-</body>
+    %sapper.scripts%
+  </body>
 </html>
