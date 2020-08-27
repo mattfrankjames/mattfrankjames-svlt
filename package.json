@@ -16,6 +16,7 @@
         "date-fns": "^1.30.1",
         "gray-matter": "^4.0.2",
         "marked": "^0.6.2",
+        "node-sass": "^4.14.1",
         "polka": "^0.5.0",
         "prismjs": "^1.21.0",
         "reading-time": "^1.2.0",
@@ -38,6 +39,7 @@
         "rollup-plugin-svelte": "^5.0.1",
         "rollup-plugin-terser": "^4.0.4",
         "sapper": "^0.27.13",
-        "svelte": "^3.0.0"
+        "svelte": "^3.0.0",
+        "svelte-preprocess": "^4.1.1"
     }
 }
