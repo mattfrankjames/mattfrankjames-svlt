@@ -1,8 +1,10 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-      return { posts };
-    });
+    return this.fetch(`blog.json`)
+      .then((r) => r.json())
+      .then((posts) => {
+        return { posts };
+      });
   }
 </script>
 
@@ -35,7 +37,7 @@
   }
 
   figcaption {
-    font-size: .8em;
+    font-size: 0.8em;
     font-style: italic;
   }
 
@@ -50,7 +52,7 @@
     font-weight: 700;
   }
   h2 {
-    margin-top: .75em;
+    margin-top: 0.75em;
   }
   .post-item-date {
     color: var(--color-tertiary);
@@ -74,13 +76,13 @@
     font-size: 2.4em;
   }
   .home-container__btn {
-    padding: .75em 1.5em;
+    padding: 0.75em 1.5em;
     color: var(--color-primary);
     background-color: var(--color-secondary);
     border: 1px solid #34e4f6;
     box-shadow: 2px 3px var(--color-primary);
     text-decoration: none;
-    transition: color .2s, background-color .2s, box-shadow .2s;
+    transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
     transform: translate(0, 0);
   }
   .home-container__btn:hover {
@@ -126,6 +128,7 @@
     .home-container__posts {
       display: grid;
       grid-column: 1/3;
+      grid-template-columns: 1.5fr 2fr;
       grid-template-columns: subgrid;
     }
     img {
@@ -143,33 +146,38 @@
 
 <div class="home-container">
   <figure>
-    <img alt='Person typing on laptop' src='undraw_biking_kc4f.svg'>
-    <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
+    <img alt="Person typing on laptop" src="undraw_biking_kc4f.svg" loading="lazy" />
+    <figcaption>
+      Illustration thanks to
+      <a href="https://undraw.co" rel="noopener noreferrer" target="_blank">Undraw</a>
+    </figcaption>
   </figure>
   <div class="home-copy">
     <h1>Hi. I'm Matt James, a front-end engineer, teacher and family man.</h1>
 
   </div>
 
-
   <div class="home-container__posts">
-  <div class="home-container__posts--top-row">
-    <h2>Latest</h2>
-    <a class="home-container__btn" rel=prefetch href='blog'>Archive&nbsp;<span aria-hidden="true">&#x3e;</span></a>
-  </div>
-    {#each posts as post, index}
-    <div class="post-item">
-    {#if index}
-      <hr />
-    {/if}
-      <h2>
-        <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
-      </h2>
-      <p>{post.excerpt}</p>
-      <div class="post-item-footer">
-        <span class="post-item-date">— {post.printDate}</span>
-      </div>
+    <div class="home-container__posts--top-row">
+      <h2>Latest</h2>
+      <a class="home-container__btn" rel="prefetch" href="blog">
+        Archive&nbsp;
+        <span aria-hidden="true">&#x3e;</span>
+      </a>
     </div>
-  {/each}
+    {#each posts as post, index}
+      <div class="post-item">
+        {#if index}
+          <hr />
+        {/if}
+        <h2>
+          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+        </h2>
+        <p>{post.excerpt}</p>
+        <div class="post-item-footer">
+          <span class="post-item-date">— {post.printDate}</span>
+        </div>
+      </div>
+    {/each}
   </div>
 </div>
