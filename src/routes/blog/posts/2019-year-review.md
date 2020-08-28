@@ -7,6 +7,8 @@ date: '2020-01-25T22:12:03.284Z'
 
 <!-- more -->
 
+2019 was a weird year. I left a job of four plus years where I was very happy and joined a much smaller company focused on eCommerce and brick and mortar retail.
+
 I can look back with pride on a number of things I accomplished at my previous role - contributing to the responsive redesign and build of an enterprise level site that had been collecting dust for years, the first [React project within the line-of-business](https://www.wellsfargoadvisors.com/planning/ira-potential/index.htm) and a number of performance and workflow improvements within our team. But, having spent the last several years going deep on studying the modern web stack and watching the rise of new and exciting UI platforms, I was beginning to feel antsy for a greater challenge, one where I could leverage the things I had been putting so much energy into learning. So, when the opportunity came to rebuild the front-end of a major eCommerce site as a progressive web app with the stack of my choosing and incorporate it into the new headless Magento API, it was a promise too good to pass up.
 
 Admittedly, the first few months were a bit rocky. There was a major platform upgrade to address, more extremely late nights and early mornings than I was used to at my previous job, and a large amount of time spent taping together legacy CSS littered with [crazy town selectors](https://css-tricks.com/crazy-town-selectors/), the result of deeply nested `.less` partials. Add to that, learning to navigate the default front-end implementation of Magento, and I was beginnng to wonder what I had signed up for. If you've had the good fortune to have avoided the standard Magento frontend architecture at this point in your career, I'd humbly recommend you keep it that way.
@@ -30,3 +32,5 @@ So, all in all, things seems to be trending in the right direction. I'm feeling 
 One thing I'm hoping to do in 2020 is blog more. I'm not putting major pressure on myself, but once a month feels doable. Who knows, maybe I'll actually get around to re-working this site into a Gatsby/headless WordPress set up like I keep threatening. For now, though, this years old Jekyll GitHub pages site suffices just fine, even though the design leaves a bit to be desired. One thing at a time, though.
 
 Thanks for reading.
+
+<a onclick="document.location.hash='top';" href="javascript:;">[Top]</a>

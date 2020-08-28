@@ -1,12 +1,13 @@
 ---
 title: Font-Display is the Hot Jam
-date: "2017-10-23T22:12:03.284Z"
-description: "This is a post about fonts"
+date: '2017-10-23T22:12:03.284Z'
 ---
 
 Ah, sweet web fonts.. Like a typographic oasis in a desert of mid-2000's 'web safe' fonts, they offered a unique aesthetic and the potential for consistent brand recognition without resorting to generic Georgia or Verdana.
 
 <!-- more -->
+
+Ah, sweet web fonts.. Like a typographic oasis in a desert of mid-2000's 'web safe' fonts, they offered a unique aesthetic and the potential for consistent brand recognition without resorting to generic Georgia or Verdana.
 
 But, unfortunately, they came with a price. Designers didn't like the early browser behavior of swapping a system font for a custom font when it loaded, so browser vendors collectively implemented FOIT, or Flash of Invsible Text, which gave a window of time for custom fonts to load before a fallback font was provided. For most browsers, this meant there were potentially up to three seconds of invisible text before a font would render. For older `-webkit-` browsers, however, this window was (and is) unlimited. Meaning, if the web font never loads, then no text will ever render.
 
@@ -41,37 +42,3 @@ The `fallback` value is a bit of a compromise between the two. It dramatically c
 The `optional` value is particularly interesting. It displays the fallback font immediately, then gives a very short window for the custom font to arrive before giving up on displaying it and sticking it in a cache for subsequent viewings. This value minimizes the chance of FOUT, but also maximizes the chance of the fallback font being the primary experience on initial view. It also lets the browser decide based on connection (sort of like `srcset` for images) if it even uses it at all. The upshot of this value is that the custom font could still be put in a service worker cache for future visits and a seamless experience.
 
 All together, this is some big time power for typography control in CSS. It makes it so we no longer to be afraid of a terrible UX based on our font choice and we can optimize for repeat users. It feels pretty great to have this much control in one line of CSS and, used in conjunction with slightly more elaborate [JS solutions](https://www.zachleat.com/web/comprehensive-webfonts/), we can get our content on the page and ready to consume almost instantly.
-
-```js
-function helloWorld() {
-  console.log("Hello World!")
-}
-```
-
-<!-- ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
----
-
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg)
-
-```js
-function helloWorld() {
-  console.log("Hello World!")
-}
-``` -->

@@ -1,12 +1,13 @@
 <script>
-
-import { dataset_dev } from "svelte/internal";
-
+  import { dataset_dev } from 'svelte/internal';
 </script>
+
 <style>
   div {
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
   }
 
   img {
@@ -25,10 +26,18 @@ import { dataset_dev } from "svelte/internal";
 </style>
 
 <div>
-  <img src="profile-pic.jpg" loading="lazy" alt="Matt James">
+  <img src="profile-pic.jpg" loading="lazy" alt="Matt James" />
   <p>
-    Hi, I'm <strong>Matt</strong>. I'm a husband, dad, cyclist and front-end developer from St. Louis, MO.
-    You can follow me on <a href="https://www.twitter.com/mattfrankjames" target="_blank" rel="noopener norefferer">Twitter</a>,
-    see some of my work on <a href="https://www.github.com/mattfrankjames" target="_blank" rel="noopener norefferer">GitHub</a>.
+    Hi, I'm
+    <strong>Matt</strong>
+    . I'm a husband, dad, cyclist and front-end developer from St. Louis, MO. You can follow me on
+    <a href="https://www.twitter.com/mattfrankjames" target="_blank" rel="noopener norefferer">
+      Twitter
+    </a>
+    or see some of my work on
+    <a href="https://www.github.com/mattfrankjames" target="_blank" rel="noopener norefferer">
+      GitHub
+    </a>
+    .
   </p>
 </div>
