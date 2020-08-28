@@ -30,7 +30,7 @@ Now that we have our initial Stripe configuration in place, we're going to need 
 ```html
 <form class="form--payment" id="payment-form" {{on 'submit' (fn this.submitPayment stripeElement)}}>
   <StripeCard @onChange={{this.setStripeElement}}/>
-  <button type="submit" class="ssButton ssButtonPrimary template-color-primary-background-color template-color-primary-color-contrast ssButtonContinue" id="stripe-payment">Submit Payment</button>
+  <button type="submit" class="btn--primary" id="stripe-payment">Submit Payment</button>
 </form>
 ```
 
@@ -78,9 +78,6 @@ export default class PaymentFormComponent extends Component {
         },
       },
     });
-    if (result.error) {
-      console.error(result.error.message);
-    }
   }
 }
 ```
