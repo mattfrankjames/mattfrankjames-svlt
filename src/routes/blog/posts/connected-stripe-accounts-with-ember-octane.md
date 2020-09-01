@@ -82,7 +82,7 @@ export default class PaymentFormComponent extends Component {
 }
 ```
 
-Here, we're saving a record to our `stripe_payment_intent` endpoint with the amount we intend to charge. From there, we're destructuring the `clientSecret` off the record we create and calling `.confirmCardPayment` on the `stripe` service we've injected. Stripe handles the rest for us.
+Here, we're saving a record to our `stripe_payment_intent` endpoint with the amount we intend to charge. From there, we're destructuring the `clientSecret` off the record we create and calling `.confirmCardPayment` on the `stripe` service we've injected from the addon. Stripe handles the rest for us.
 
 Of course, we'll need access to the account number for our connected account so we can pass it along when we initialize Stripe with `stripe.load`. This will be done in the `beforeModel()` hook of our route file as we've set Stripe to lazy load in our `config/environment.js` file.
 
