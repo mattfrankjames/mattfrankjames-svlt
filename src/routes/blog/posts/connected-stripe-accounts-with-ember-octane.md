@@ -3,11 +3,11 @@ title: Connected Stripe Accounts with Ember Octane
 date: '2020-08-28T09:12:03.284Z'
 ---
 
-Taking payments on the web can be tricky. Both the need to consider the security of the end user and the complexities of implementation as a developer mean that commerce can present a particular challenge when building web apps. Luckily, Stripe has made the process as close to painless as possible. While it's easy to find resources on how to accept direct payments, and even payments on behalf of a single third party account, it's much less straightforward when accpeting payments on behalf of multiple accounts. Even less so if your development stack is based on Ember Octane. Let's dig in and look at how to get this done.
+Taking payments on the web can be tricky. Both the need to consider the security of the end user and the complexities of implementation as a developer mean that commerce can present a particular challenge when building web apps. Luckily, Stripe has made the process as close to painless as possible. While it's easy to find resources on how to accept direct payments, and even payments on behalf of a single third party account, it's much less straightforward when accepting payments on behalf of multiple accounts. Even less so if your development stack is based on Ember Octane. Let's dig in and look at how to get this done.
 
 <!-- more -->
 
-Taking payments on the web can be tricky. Both the need to consider the security of the end user and the complexities of implementation as a developer mean that commerce can present a particular challenge when building web apps. Luckily, Stripe has made the process as close to painless as possible. While it's easy to find resources on how to accept direct payments, and even payments on behalf of a single third party account, it's much less straightforward when accpeting payments on behalf of multiple accounts. Even less so if your development stack is based on Ember Octane. Let's dig in and look at how to get this done.
+Taking payments on the web can be tricky. Both the need to consider the security of the end user and the complexities of implementation as a developer mean that commerce can present a particular challenge when building web apps. Luckily, Stripe has made the process as close to painless as possible. While it's easy to find resources on how to accept direct payments, and even payments on behalf of a single third party account, it's much less straightforward when accepting payments on behalf of multiple accounts. Even less so if your development stack is based on Ember Octane. Let's dig in and look at how to get this done.
 
 ## The Payment Intents API
 
