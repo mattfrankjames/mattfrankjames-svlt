@@ -108,7 +108,7 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(20, 89, 96, .8), rgba(0, 0, 0, 0));
   border: 0;
   height: 2px;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 code {
