@@ -11,48 +11,46 @@ As one of the elder statemen in the JavaScript framework landscape, Ember has be
 
 Before we go any farther, let's define what we're talking about when we use the term "domain components". If you are coming from another framework like React, you're probably familiar with the concept of smart components versus dumb components. Typically, all of your business logic would take place in the "smart" components - data filtering, conditional content, etc. while the "dumb" components would have the sole responsibility of displaying content and rendering the "smart" components. In my current role, our organization refers to these "smart" components in Ember as "domain components".
 
-If you've been an Ember developer for a while, you may have grown accustomed to setting up this business logic within a controller. While this is still an effective way to work, many developers less versed in Ember-isms may find the added layer of complexity a bit confusing. With domain components, we can move that functionality directly into the component and come much closer to replicating the behavior of other frameworks. Let's look at an example.
+If you've been an Ember developer for a while, you may have grown accustomed to setting up this business logic within a controller. While controllers are still needed for things like defining query params, many developers less versed in Ember-isms might see defining component specific logic in a contoller as confusing compared to keeping it a component's JS file. With domain components, we can move that functionality directly into the component and come much closer to replicating the behavior of other frameworks. Let's look at an example.
 
 First, we're going to need to grab some data from our API. In Ember, this typically takes place in the `model()` hook of a route file.
 
 ```js
 async model() {
   const { store } = this;
-  const promotionProducts = await store.query('promotion-product', {
+  const myProducts = await store.query('my-product', {
     // whatever params you need go here
   });
-  const promotionProduct = promotionProducts.firstObject;
+  const myProduct = myProducts.firstObject;
   return {
-    promotionProduct,
+    myProduct,
   };
 }
 ```
 
-Now that we have all the data associated with our single `promotionProduct`, we need to make it available to our template.
+Now that we have all the data associated with our single `myProduct`, we need to make it available to our template.
 
 ```HTML
 <!-- app/templates/index.hbs -->
-<div class="page-wrapper">
-  <PaymentStatus @promotionProduct={{@model.promotionProduct}}/>
-</div>
+<ProductStatus @myProduct={{@model.myProduct}}/>
 ```
 
-Here is where the domain component comes into play. The template file for this route exists only to invoke the domain component. The domain component has a `@promotionProduct` argument that receives the data fetched in the route's `model()` hook. The argument can be named anything, but I find a little less mental overhead if the argument name matches what's returned from the `model()`.
+Here is where the domain component comes into play. The template file for this route exists only to invoke the domain component. The domain component has a `@myProduct` argument that receives the data fetched in the route's `model()` hook. The argument can be named anything, but I find a little less mental overhead if the argument name matches what's returned from the `model()`.
 
 With the data now passed in to the component, let's define some properties in the component's JS file that we'll use in it's template.
 
 ```js
-export default class PaymentStatusComponent extends Component {
+export default class ProductStatusComponent extends Component {
   get price() {
-    return this.args.promotionProduct.price;
+    return this.args.myProduct.price;
   }
   get paymentPeriodHasEnded() {
-    return Date.now() > this.args.promotionProduct.purchaseEndDate;
+    return Date.now() > this.args.myProduct.paymentEndDate;
   }
   get paymentPeriodIsActive() {
     return (
-      this.args.promotionProduct.purchaseStartDate < Date.now() &&
-      Date.now() < this.args.promotionProduct.purchaseEndDate
+      this.args.myProduct.paymentStartDate < Date.now() &&
+      Date.now() < this.args.myProduct.paymentEndDate
     );
   }
 }
@@ -65,7 +63,7 @@ Now that we've filtered the data in the JS to get what we need, we can make use 
 ```HBS
 {{if this.paymentPeriodIsActive}}
   <h2>$ {{this.price}}</h2>
-  <button type="button" class="ssButton ssButtonPrimary template-color-primary-background-color">Pay Now</button>
+  <button type="button" class="btn--primary">Pay Now</button>
 {{/if}}
 {{#if this.paymentPeriodHasEnded}}
   <h2>{{i18n-t "unavailable"}}</h2>
@@ -75,4 +73,4 @@ Now that we've filtered the data in the JS to get what we need, we can make use 
 {{/if}}
 ```
 
-And with that, we've moved our business logic into a component that handles the display of data, leaving our route template the simple task of rendering components. By leveraging the power of domain components, we've made sure that we've separated the concerns of our app and removed one step in the hot potato'ing of the data we need to render our content. Even better, we've taken a much needed step toward aligning Ember's implementation more with newer frameworks, meaning that it will be much more straightforward to onboard new developers come to Ember and get them up and running quickly.
+And with that, we've moved our business logic into a component that handles the display of data, leaving our route template the simple task of rendering components. By leveraging the power of domain components, we've made sure that we've separated the concerns of our app and removed one step in the hot potato'ing of the data we need to render our content. Even better, we've taken a much needed step toward aligning Ember's implementation with newer frameworks, meaning that it will be much more straightforward to onboard new developers coming to Ember and get them up and running quickly.
