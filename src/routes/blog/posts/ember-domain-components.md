@@ -16,6 +16,7 @@ If you've been an Ember developer for a while, you may have grown accustomed to 
 First, we're going to need to grab some data from our API. In Ember, this typically takes place in the `model()` hook of a route file.
 
 ```js
+// app/routes/index.js
 async model() {
   const { store } = this;
   const myProducts = await store.query('my-product', {
@@ -40,6 +41,7 @@ Here is where the domain component comes into play. The template file for this r
 With the data now passed in to the component, let's define some properties in the component's JS file that we'll use in it's template.
 
 ```js
+//app/routes/product-status.js
 export default class ProductStatusComponent extends Component {
   get price() {
     return this.args.myProduct.price;
@@ -61,6 +63,7 @@ As a quick aside, if you're coming from React, think of `args` just like `props`
 Now that we've filtered the data in the JS to get what we need, we can make use of the properties to conditionally display content within the component's template.
 
 ```HBS
+{{!-- //app/routes/product-status.hbs --}}
 {{if this.paymentPeriodIsActive}}
   <h2>$ {{this.price}}</h2>
   <button type="button" class="btn--primary">Pay Now</button>
