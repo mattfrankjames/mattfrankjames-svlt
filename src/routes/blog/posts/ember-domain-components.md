@@ -66,7 +66,7 @@ Now that we've filtered the data in the JS to get what we need, we can make use 
   <button type="button" class="btn--primary">Pay Now</button>
 {{/if}}
 {{#if this.paymentPeriodHasEnded}}
-  <h2>{{i18n-t "unavailable"}}</h2>
+  <h2>Unavailable</h2>
   <div class="payment-status--inactive">
     <p>No longer accepting payments.</p>
   </div>
