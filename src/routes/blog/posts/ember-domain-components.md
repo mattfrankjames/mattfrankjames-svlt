@@ -3,11 +3,11 @@ title: Simplify Your Ember App with Domain Components
 date: '2020-09-03T22:12:03.284Z'
 ---
 
-As one of the elder statemen in the JavaScript framework landscape, Ember has been around for a long time. While it has fallen out of favor somewhat over the last few years with rise of React, Vue and Svelte, Ember is still very much alive and has been completely overhauled with the recent release of Ember Octane. If you find yourself coming to Ember from another framework, it can be a bit daunting at first. But, by leveraging Octane to create an architecture built on _domain components_, things start to feel much more familiar. Let's dig in.
+As one of the elder statemen in the JavaScript framework landscape, Ember has been around for a long time. While it has fallen out of favor somewhat over the last few years with the rise of React, Vue and Svelte, Ember is still very much alive and has been completely overhauled with the recent release of Ember Octane. If you find yourself coming to Ember from another framework, it can be a bit daunting at first. But, by leveraging Octane to create an architecture built on _domain components_, things start to feel much more familiar. Let's dig in.
 
 <!-- more -->
 
-As one of the elder statemen in the JavaScript framework landscape, Ember has been around for a long time. While it has fallen out of favor somewhat over the last few years with rise of React, Vue and Svelte, Ember is still very much alive and has been completely overhauled with the recent release of Ember Octane. If you find yourself coming to Ember from another framework, it can be a bit daunting at first. But, by leveraging Octane to create an architecture built on _domain components_, things start to feel much more familiar. Let's dig in.
+As one of the elder statemen in the JavaScript framework landscape, Ember has been around for a long time. While it has fallen out of favor somewhat over the last few years with the rise of React, Vue and Svelte, Ember is still very much alive and has been completely overhauled with the recent release of Ember Octane. If you find yourself coming to Ember from another framework, it can be a bit daunting at first. But, by leveraging Octane to create an architecture built on _domain components_, things start to feel much more familiar. Let's dig in.
 
 Before we go any farther, let's define what we're talking about when we use the term "domain components". If you are coming from another framework like React, you're probably familiar with the concept of smart components versus dumb components. Typically, all of your business logic would take place in the "smart" components - data filtering, conditional content, etc. while the "dumb" components would have the sole responsibility of displaying content and rendering the "smart" components. In my current role, our organization refers to these "smart" components in Ember as "domain components".
 
@@ -41,7 +41,7 @@ Here is where the domain component comes into play. The template file for this r
 With the data now passed in to the component, let's define some properties in the component's JS file that we'll use in it's template.
 
 ```js
-//app/routes/product-status.js
+//app/components/product-status.js
 export default class ProductStatusComponent extends Component {
   get price() {
     return this.args.myProduct.price;
@@ -63,7 +63,7 @@ As a quick aside, if you're coming from React, think of `args` just like `props`
 Now that we've filtered the data in the JS to get what we need, we can make use of the properties to conditionally display content within the component's template.
 
 ```HBS
-{{!-- //app/routes/product-status.hbs --}}
+{{!-- //app/components/product-status.hbs --}}
 {{if this.paymentPeriodIsActive}}
   <h2>$ {{this.price}}</h2>
   <button type="button" class="btn--primary">Pay Now</button>
