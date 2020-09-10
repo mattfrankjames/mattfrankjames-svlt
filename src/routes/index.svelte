@@ -146,38 +146,38 @@
 
 <div class="home-container">
   <figure>
-    <img alt="Person typing on laptop" src="undraw_biking_kc4f.svg" loading="lazy" width="475" height="365"/>
+    <img
+      alt="Person typing on laptop"
+      src="undraw_biking_kc4f.svg"
+      loading="lazy"
+      width="475"
+      height="365" />
     <figcaption>
-      Illustration thanks to
-      <a href="https://undraw.co" rel="noopener noreferrer" target="_blank">Undraw</a>
+      Illustration thanks to <a href="https://undraw.co" rel="noopener noreferrer" target="_blank">Undraw</a>
     </figcaption>
   </figure>
   <div class="home-copy">
     <h1>Hi. I'm Matt James, a front-end engineer, teacher and family man.</h1>
-
   </div>
 
   <div class="home-container__posts">
     <div class="home-container__posts--top-row">
       <h2>Latest</h2>
       <a class="home-container__btn" rel="prefetch" href="blog">
-        Archive&nbsp;
-        <span aria-hidden="true">&#x3e;</span>
+        Archive&nbsp; <span aria-hidden="true">&#x3e;</span>
       </a>
     </div>
     {#each posts as post, index}
-      <div class="post-item">
-        {#if index}
-          <hr />
-        {/if}
-        <h2>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-        </h2>
-        <p>{post.excerpt}</p>
-        <div class="post-item-footer">
-          <span class="post-item-date">— {post.printDate}</span>
+      {#if index <= 2}
+        <div class="post-item">
+          {#if index}
+            <hr />
+          {/if}
+          <h2><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></h2>
+          <p>{post.excerpt}</p>
+          <div class="post-item-footer"><span class="post-item-date">— {post.printDate}</span></div>
         </div>
-      </div>
+      {/if}
     {/each}
   </div>
 </div>
