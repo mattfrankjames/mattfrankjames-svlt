@@ -2,6 +2,7 @@
   img {
     border-radius: 8px;
     grid-column: 2/3;
+    aspect-ratio: 10/8;
   }
   .container {
     max-width: 1200px;
@@ -63,6 +64,7 @@
         <li>
           <a href="https://www.sony.com/electronics/headband-headphones/wh-ch700n">Sony WH-CH700</a>
           headphones<br />They're cheap and sound great
+
         </li>
         <li>
           <a
