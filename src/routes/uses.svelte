@@ -63,7 +63,8 @@
         <li>Apple Watch</li>
         <li>
           <a href="https://www.sony.com/electronics/headband-headphones/wh-ch700n">Sony WH-CH700</a>
-          headphones. <br />They're cheap and sound great
+          headphones<br />They're cheap and sound great
+
         </li>
         <li>
           <a
@@ -74,8 +75,8 @@
       <h2>Apps</h2>
       <ul>
         <li>
-          VS Code. <a href="https://vscodethemes.com/e/dermohamad.ayu-owl">AyuOwl Theme</a> Operator
-          Mono lig font
+          VS Code <a href="https://vscodethemes.com/e/dermohamad.ayu-owl">AyuOwl Theme</a> Operator Mono
+          lig font
         </li>
         <li>
           iTerm 2 <a href="https://github.com/nickcernis/iterm2-night-owl">Night Owl theme</a> Operator
