@@ -3,7 +3,7 @@
     border-radius: 8px;
     grid-column: 2/3;
   }
-  .container{
+  .container {
     max-width: 1200px;
   }
 </style>
@@ -19,8 +19,15 @@
     <div class="content-wrapper__text-block">
       <h2>Desk</h2>
       <ul>
-        <li><a href="https://store.hp.com/us/en/pdp/hp-27er-27-inch-display">HP 27er 27" monitor</a><br />Horizontal for code and browser</li>
-        <li><a href="https://www.usa.philips.com/c-p/276E9QDSB_27/lcd-monitor-with-ultra-wide-color">Phillips 276E9Q 27"</a><br /> Vertical for Terminal and Slack</li>
+        <li>
+          <a href="https://store.hp.com/us/en/pdp/hp-27er-27-inch-display">HP 27er 27" monitor</a><br />Horizontal
+          for code and browser
+        </li>
+        <li>
+          <a
+            href="https://www.usa.philips.com/c-p/276E9QDSB_27/lcd-monitor-with-ultra-wide-color">Phillips
+            276E9Q 27"</a><br /> Vertical for Terminal and Slack
+        </li>
         <li>Big old desk from a previous job</li>
         <li>
           <a
@@ -35,7 +42,11 @@
             wooden monitor stand</a><br />I'm kind of tall, so it helps to get the monitor up a bit.
           Plus, there's space underneath for random crap.
         </li>
-        <li><a href="https://www.amazon.com/Griffin-GC16034-Elevator-Stand-Laptops/dp/B013BNHROE/ref=sr_1_4?crid=2HRETANECMS4D&dchild=1&keywords=griffin+laptop+stand&qid=1601043547&s=office-products&sprefix=Griffin+%2Coffice-products%2C179&sr=1-4">Griffin laptop stand</a></li>
+        <li>
+          <a
+            href="https://www.amazon.com/Griffin-GC16034-Elevator-Stand-Laptops/dp/B013BNHROE/ref=sr_1_4?crid=2HRETANECMS4D&dchild=1&keywords=griffin+laptop+stand&qid=1601043547&s=office-products&sprefix=Griffin+%2Coffice-products%2C179&sr=1-4">Griffin
+            laptop stand</a>
+        </li>
       </ul>
       <h2>Computer setup</h2>
       <ul>
@@ -49,13 +60,26 @@
         <li>iPhone 11 pro</li>
         <li>iPad Pro</li>
         <li>Apple Watch</li>
-        <li><a href="https://www.sony.com/electronics/headband-headphones/wh-ch700n">Sony WH-CH700</a> headphones. <br>They're cheap and sound great</li>
-        <li><a href="https://tzumi.com/collections/chargers/products/90-multi-angle-folding-desktop-wireless-charger">Tzumi Qi charging phone stand</a></li>
+        <li>
+          <a href="https://www.sony.com/electronics/headband-headphones/wh-ch700n">Sony WH-CH700</a>
+          headphones<br />They're cheap and sound great
+        </li>
+        <li>
+          <a
+            href="https://tzumi.com/collections/chargers/products/90-multi-angle-folding-desktop-wireless-charger">Tzumi
+            Qi charging phone stand</a>
+        </li>
       </ul>
       <h2>Apps</h2>
       <ul>
-        <li>VS Code. <a href="https://vscodethemes.com/e/dermohamad.ayu-owl">AyuOwl Theme</a> Operator Mono lig font</li>
-        <li>iTerm 2 <a href="https://github.com/nickcernis/iterm2-night-owl">Night Owl theme</a> Operator Mono lig font</li>
+        <li>
+          VS Code <a href="https://vscodethemes.com/e/dermohamad.ayu-owl">AyuOwl Theme</a> Operator Mono
+          lig font
+        </li>
+        <li>
+          iTerm 2 <a href="https://github.com/nickcernis/iterm2-night-owl">Night Owl theme</a> Operator
+          Mono lig font
+        </li>
         <li>Postman for REST testing</li>
         <li>Adobe Lightroom for photo editing</li>
       </ul>
