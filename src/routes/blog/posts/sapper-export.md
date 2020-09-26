@@ -3,7 +3,7 @@ title: A Little Think I Learned About `sapper export`
 date: '2020-09-26T22:12:03.284Z'
 ---
 
-I put this site together with [Svelte](https://svelte.dev/) and [Sapper](https://sapper.svelte.dev/) and am hosting it on [Netlify](https://www.netlify.com/). It's a glorious workflow. Write a post or make a new route, push to `main` and viola, instant deploys. The other day I decided to make a `/uses` page as I've enjoyed looking at other people's uses page. I stuck it in the `routes` folder of the `src` directory, saw it when developing but it kept not making it through the Netlify deploy. What was the deal? It turns out that the behavior of the `sapper export` command that Netlify was running on deploy was at fault. Let'd take a look at this little quirk of that build command.
+I put this site together with Svelte and Sapper and am hosting it on Netlify. It's a glorious workflow. Write a post or make a new route, push to main and viola, instant deploys. The other day I decided to make a /uses page as I've enjoyed looking at other people's uses page. I stuck it in the routes folder of the src directory, saw it when developing but it kept not making it through the Netlify deploy. What was the deal? It turns out that the behavior of the sapper export command that Netlify was running on deploy was at fault. Let'd take a look at this little quirk of that build command.
 
 <!-- more -->
 
