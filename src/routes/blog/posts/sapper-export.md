@@ -1,5 +1,5 @@
 ---
-title: A Little Think I Learned About `sapper export`
+title: A Little Thing I Learned About `sapper export`
 date: '2020-09-26T22:12:03.284Z'
 ---
 
