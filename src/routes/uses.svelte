@@ -72,6 +72,7 @@
             Qi charging phone stand</a>
         </li>
       </ul>
+      <script src="https://embeddev.secondstreetapp.com/Scripts/dist/embed.js" data-ss-embed="promotion" data-opguid="888cd1ba-0745-48b1-8b80-56adad398b0f" data-routing="hash">/**/</script>
       <h2>Apps</h2>
       <ul>
         <li>
