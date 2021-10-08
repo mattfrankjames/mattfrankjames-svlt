@@ -17,7 +17,7 @@ Before we do that, let’s look at what we currently have available to us.
 
 ## Media Queries
 
-Media queries unlocked responsive web design, giving developers the ability to respond to the user’s browser viewport and adjust styles and layout accordingly. To use them, we set a base style in CSS, then set up a media query within which styles are adjusted when whatever condition the media query is testing for i
+Media queries unlocked responsive web design, giving developers the ability to respond to the user’s browser viewport and adjust styles and layout accordingly. To use them, we set a base style in CSS, then set up a media query within which styles are adjusted when whatever condition the media query is testing for is met.
 
 ```css
 .wrapper {
