@@ -13,7 +13,7 @@ In recent years, just about all modern browsers have implemented `prefers` media
 
 First, let's start with some CSS custom properties, defined at the `:root` level.
 
-```CSS
+```css
 :root {
   --color-primary: #36393b;
   --color-secondary: white;
@@ -24,7 +24,7 @@ First, let's start with some CSS custom properties, defined at the `:root` level
 
 Then, let's apply those to our base CSS for our page:
 
-```CSS
+```css
 body {
   margin: 0;
   font-family: 'Kanit', sans-serif;
@@ -36,7 +36,7 @@ body {
 ```
 So far, so good. Now, all we need to do is to flip the value of some of those custom properties inside of our user preferences media query:
 
-```CSS
+```css
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: white;
